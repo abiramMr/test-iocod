@@ -1,0 +1,20 @@
+@mixin flex-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  @mixin btn-block {
+    background-color: $green !important;
+    color: $brown !important;
+    &:focus,
+    &:active {
+      background-color: $white !important;
+      color: $brown !important;
+      border: solid 0.5px $green;
+    }
+    &:hover {
+      background-color: $white !important;
+      color: $brown !important;
+    }
+  }

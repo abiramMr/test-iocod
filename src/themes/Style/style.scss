@@ -1,0 +1,119 @@
+@import "variables";
+@import "mixins";
+@import "~bootstrap/scss/bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap");
+
+body {
+  background: linear-gradient(to right, $brown, $dark-blue);
+  font-family: "Darker Grotesque", sans-serif !important;
+}
+.navbar {
+  background: linear-gradient(to right, $brown, $dark-blue);
+  .nav-item {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+  .nav-link {
+    color: $white !important;
+    &:focus,
+    &:active {
+      color: $green !important;
+      border-bottom: solid 1.5px $green;
+    }
+    &:hover {
+      color: $green !important;
+    }
+  }
+  .btn {
+    border-radius: 20px;
+    @include btn-block;
+  }
+  .dropdown-menu {
+    background-color: $brown;
+    .dropdown-item {
+      color: $green;
+      &:hover {
+        color: $brown !important;
+      }
+    }
+  }
+  .navbar-toggler {
+    border-color: $green;
+
+    .bar {
+      display: block;
+      height: 3px;
+      width: 26px;
+      background: $green;
+      margin: 5px auto;
+      transition: all 0.3s ease;
+    }
+  }
+}
+.text-block {
+  height: 40vh;
+  @include flex-block;
+  justify-content: center;
+}
+h6 {
+  color: $white;
+}
+.first-text {
+  h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+    color: $white;
+  }
+  span {
+    color: $green;
+  }
+}
+.second-area {
+  @include flex-block;
+  justify-content: center;
+  .input-area {
+    @include flex-block;
+    justify-content: start;
+    height: 45px;
+    background-color: $white;
+    border-radius: 25px;
+    width: 400px;
+    input {
+      border: none;
+      background-color: $white;
+    }
+  }
+  .btn {
+    height: 45px;
+    width: 170px;
+    border-radius: 25px;
+    @include btn-block;
+  }
+}
+.card {
+  background: none;
+  border: none;
+  .card-header {
+    border: none;
+  }
+}
+h3 {
+  color: $green;
+}
+@media (max-width: 767px) {
+  .input-area {
+    margin-bottom: 20px;
+    transform: translateX(16px);
+  }
+}
+
+@media (max-width: 480px) {
+  .text-block {
+    height: 60vh;
+  }
+}
+@media (max-width: 320px) {
+  .text-block {
+    height: 80vh;
+  }
+}
